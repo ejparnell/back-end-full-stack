@@ -2,5 +2,10 @@
 
 class User < ApplicationRecord
   include Authentication
-  has_many :examples
+  belongs_to :pokemon,
+             class_name: 'Monster',
+             inverse_of: 'trainer'
+
+  has_many :bags, dependent: :destroy
+  has_many :monster, through: :bags
 end
