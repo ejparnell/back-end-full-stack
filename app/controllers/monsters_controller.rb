@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class MonstersController < ApplicationController
-  before_action :set_monster, only: [:show, :update, :destroy]
+  before_action :set_monster, only: %i[show update destroy]
 
   # GET /monsters
   def index
@@ -39,13 +41,14 @@ class MonstersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_monster
-      @monster = Monster.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def monster_params
-      params.require(:monster).permit(:name, :breed, :rarity)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_monster
+    @monster = Monster.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def monster_params
+    params.require(:monster).permit(:name, :breed, :rarity)
+  end
 end

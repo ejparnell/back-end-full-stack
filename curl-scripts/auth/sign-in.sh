@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/sign-in" \
+curl "http://lwarm-eyrie-66750.herokuapp.com/sign-in" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

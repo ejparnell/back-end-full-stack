@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Monster < ApplicationRecord
   has_many :trainer,
            class_name: 'User',

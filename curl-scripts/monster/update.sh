@@ -1,8 +1,6 @@
-#!/bin/bash
-
-curl "https://warm-eyrie-66750.herokuapp.com/monsters" \
+curl "https://warm-eyrie-66750.herokuapp.com/monsters/${ID}" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-Type: application/json" \
   --data '{
     "monster": {

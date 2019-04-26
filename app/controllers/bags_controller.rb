@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class BagsController < OpenReadController
-  before_action :set_bag, only: [:update, :destroy]
+  before_action :set_bag, only: %i[update destroy]
 
   # GET /bags
   def index
@@ -42,13 +44,14 @@ class BagsController < OpenReadController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bag
-      @bag = current_user.bags.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def bag_params
-      params.require(:bag).permit(:user_id, :monster_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_bag
+    @bag = current_user.bags.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def bag_params
+    params.require(:bag).permit(:user_id, :monster_id)
+  end
 end

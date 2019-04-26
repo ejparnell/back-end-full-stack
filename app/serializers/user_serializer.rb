@@ -2,5 +2,4 @@
 
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :email, :pokemon
-
 end

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/bags" \
+curl "http://warm-eyrie-66750.herokuapp.com/bags" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
