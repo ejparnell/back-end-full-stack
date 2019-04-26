@@ -11,4 +11,5 @@ class User < ApplicationRecord
   has_many :monster, through: :bags
 
   validates :email, presence: true
+  validates_length_of :bags, maximum: 6
 end

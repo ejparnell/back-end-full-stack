@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-class BagsController < OpenReadController
+class BagsController < ProtectedController
   before_action :set_bag, only: %i[update destroy]
 
   # GET /bags
   def index
-    @bags = Bag.all
+    @bags = current_user.bags.all
 
     render json: @bags
   end
 
   # GET /bags/1
   def show
-    @bag = Bag.find(params[:id])
+    @bag = current_user.bags.find(params[:id])
     render json: @bag
   end
 

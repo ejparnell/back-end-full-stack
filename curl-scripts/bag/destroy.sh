@@ -1,4 +1,4 @@
-curl "http://warm-eyrie-66750.herokuapp.com/bags/${ID}" \
+curl "http://localhost:4741/bags/${ID}" \
   --include \
   --request DELETE \
   --header "Content-Type: application/json" \
