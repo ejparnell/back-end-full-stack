@@ -12,6 +12,9 @@ done in a simple rock, paper, scissors method with a random number that picks
 a winner if there is no clear winner. When you encounter a "wild" pokemon it's
 just using a random number again to pick one for you.
 
+The front end repo for this project is located here:
+https://github.com/ejparnell/full-stack-front-end
+
 ## Planning
 This project I took the most time planning the back end. I knew I wanted to be
 able for users to own a pokemon and for a user to only have 6 pokemon at a time
